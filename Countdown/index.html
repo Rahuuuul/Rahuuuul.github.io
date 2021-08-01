@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Class Position Calculator </title>
+        <link rel="icon" 
+      type="image/png" 
+      href="favicon.png">
+        <!--CSS-->
+        <link rel='stylesheet' type='text/css' href='indexstyle.css'>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    </head>       
+
+
+
+    <header>
+    <body>
+            <h1> How Many Days Until Graduation? (Class of 2023) </h1>
+            <h2 id="days"></h2>
+            <h3 id="hours"></h3>
+            <h4 id="mins"><h4>
+            <h5 id="secs"></h5>
+            <script>
+            var date1 = new Date("Nov 17, 2023 15:00:00").getTime();
+        
+            var myfunc = setInterval(function() {
+        
+            var now = new Date().getTime();
+            var timeleft = date1 - now;
+                
+            var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+                
+            document.getElementById("days").innerHTML = days + " Days"
+            document.getElementById("hours").innerHTML = hours + " Hours" 
+            document.getElementById("mins").innerHTML = minutes + " Minutes" 
+            document.getElementById("secs").innerHTML = seconds + " Seconds" 
+                
+            if (timeleft < 0) {
+                clearInterval(myfunc);
+                document.getElementById("days").innerHTML = ""
+                document.getElementById("hours").innerHTML = "" 
+                document.getElementById("mins").innerHTML = ""
+                document.getElementById("secs").innerHTML = ""
+            }
+            }, 1000);
+            </script>
+
+        <div class="bottom-stuff">
+            <!--Info Abt Site-->
+            <span class="info">Somewhat Accurate</a>
+            </span>
+        </div>
+    </body>
+    </header>
+</html>
