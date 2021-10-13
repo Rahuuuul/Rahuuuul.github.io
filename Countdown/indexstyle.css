@@ -56,5 +56,6 @@ input:hover{background-color: #75766f;
     bottom: 0;
     left: 0;
     width: 100%;}
-.bottom-stuff a{color: #ffff}
+.bottom-stuff a{color: #ffff;
+    text-align: center}
 
