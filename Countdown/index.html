@@ -33,9 +33,10 @@
             <h3 id="hours"></h3>
             <h4 id="mins"><h4>
             <h5 id="secs"></h5>
-            <h6>.</h6>
+            <h6 id="days1"></h6>
             <script>
             var date1 = new Date("Nov 17, 2023 15:00:00").getTime();
+            //insert end date number here
         
             var myfunc = setInterval(function() {
         
@@ -60,6 +61,37 @@
                 document.getElementById("secs").innerHTML = ""
             }
             }, 1000);
+
+            var date2 = new Date("Jan 27, 2010 09:00:00").getTime();
+            // insert start date number here
+        
+        var myfunc1 = setInterval(function() {
+    
+        var now1 = new Date().getTime();
+        var timeleft1 = now1 - date2;
+            
+        var days1 = Math.floor(timeleft1 / (1000 * 60 * 60 * 24));
+
+        //calculating the difference from start to finish
+        var Difference = date1 - date2;
+
+        //Calculate number of days
+        var DiffDays = Math.floor(Difference / (1000 * 60 * 60 * 24)); 
+        var percent1 = (days1/DiffDays)*100;
+        //round percent
+        var roundedpercent = Math.round(percent1)
+            
+        document.getElementById("days1").innerHTML = "You've already had around " +  days1 + " days of school, so you are about " + roundedpercent + "% of the way there!";
+
+            
+        if (timeleft < 0) {
+            clearInterval(myfunc);
+            document.getElementById("days1").innerHTML = ""
+            document.getElementById("hours1").innerHTML = "" 
+            document.getElementById("mins1").innerHTML = ""
+            document.getElementById("secs1").innerHTML = ""
+        }
+        }, 1000);
             </script>
 
         <div class="bottom-stuff">
