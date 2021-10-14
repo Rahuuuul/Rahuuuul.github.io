@@ -79,7 +79,7 @@
         var DiffDays = Math.floor(Difference / (1000 * 60 * 60 * 24)); 
         var percent1 = (days1/DiffDays)*100;
         //round percent
-        var roundedpercent = Math.round(percent1)
+        var roundedpercent = percent1.toFixed(3)
             
         document.getElementById("days1").innerHTML = "You've already had around " +  days1 + " days of school, so you are about " + roundedpercent + "% of the way there!";
 
