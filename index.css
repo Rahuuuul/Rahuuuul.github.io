@@ -62,3 +62,9 @@ h1{
 .socials a:hover {
     color:rgba(221, 221, 221, 0.377);
 }
+
+@media screen and (max-width: 992px) {
+    h1{font-weight: normal;font-size: 200px;}.socials {margin-top: 150px;}
+    .socials a{
+        padding: 50px;}
+}
