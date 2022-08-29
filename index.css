@@ -62,6 +62,39 @@ h1{
 .socials a:hover {
     color:rgba(221, 221, 221, 0.377);
 }
+footer {
+    padding: 10px 10px;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 300px;
+    display: grid;
+    background: rgb(221, 221, 221);
+max-height: 10vh;}
+footer h1 {
+    text-align:center;
+    margin: auto;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+footer a {
+    text-align:center;
+    text-decoration: none;
+    margin: auto;
+    color: #000;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+}
+footer a:hover {
+    color:rgb(66, 66, 66)
+}
 
 @media screen and (max-width: 992px) {
     h1{font-weight: normal;font-size: 200px;}.socials {margin-top: 150px;}
