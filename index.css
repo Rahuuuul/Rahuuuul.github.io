@@ -71,7 +71,7 @@ footer {
     margin-top: 300px;
     display: grid;
     background: rgb(221, 221, 221);
-max-height: 10vh;}
+max-height: 11vh;}
 footer h1 {
     text-align:center;
     margin: auto;
@@ -79,7 +79,7 @@ footer h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 15px;
+    font-size: 2vh;
 }
 footer a {
     text-align:center;
@@ -90,7 +90,8 @@ footer a {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 19px;
+    font-size: 2.5vh;
+    padding-bottom: 10px;
 }
 footer a:hover {
     color:rgb(66, 66, 66)
