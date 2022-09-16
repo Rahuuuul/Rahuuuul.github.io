@@ -98,6 +98,8 @@ footer a:hover {
 
 @media screen and (max-width: 992px) {
     h1{font-weight: normal;font-size: 200px;}.socials {margin-top: 150px;}
+    .socials{flex-direction: column;}
     .socials a{
-        padding: 50px;}
+        padding: 6vh;
+        }
 }
