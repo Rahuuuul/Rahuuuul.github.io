@@ -39,7 +39,7 @@ html{font-family: 'Source Code Pro', monospace;background:#0a4a64;max-height:100
 .nav .icon {display: none;}
 #about, #awards, #projects{display: none;height: 80vh;position:relative; color: #ffffff;}
 #about h1, #awards h1, #projects h1{font-size: 5vh;padding-top: 4vh;}
-table{border: none; width: 65%; table-layout: fixed;}
+table{border: none; width: 80%; table-layout: fixed;}
 table a{font-size: 3vh;color: #ffff;text-decoration: underline;}
 table a.link{font-size: 2vh;}
 table a:hover{color:rgba(221, 221, 221, 0.377);}
