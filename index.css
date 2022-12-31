@@ -32,22 +32,34 @@ html{font-family: 'Source Code Pro', monospace;background:#0a4a64;max-height:100
 }
 .socials a:hover {color:rgba(221, 221, 221, 0.377);}
 
-#linksandstuff {
-    margin-left: 10%;
-    margin-top: 7vh;
-    height: 80vh;
-    border-left: 0.5vh solid #ffffff;
-    position: absolute;
-    left: 50%;
+.nav {overflow: hidden;background: rgb(221, 221, 221);vertical-align: middle;}
+
+  .nav a {
+    float: left;
+    vertical-align: middle;
+    display: table;
+    color: rgb(72, 72, 72);
+    text-align: center;
+    padding: 1vh 2vh;
+    text-decoration: none;
+    font-size: 2vh;}
+  
+  .nav a:hover, .nav a.active {color: rgb(0, 0, 0);border-bottom: solid;}
+  
+  .nav .icon {
+    display: none;
+  }
+#about, #awards, #projects{
+   display: none;
+   height: 80vh;
+   position:relative;
 }
-#linksandstuff #link {
-    color: #ffffff;
-    font-size: 3vh;
-    padding-left: 4vh;
-    padding-bottom: 15vh;
 
 
-}
+
+#linksandstuff {margin-left: 10%;margin-top: 7vh;height: 80vh;border-left: 0.5vh solid #ffffff;position: absolute;left: 50%;}
+
+#linksandstuff #link {color: #ffffff;font-size: 3vh;padding-left: 4vh;padding-bottom: 15vh;}
 #linksandstuff a {color: #ffffff;}
 #linksandstuff a:hover {color:rgba(221, 221, 221, 0.377);}
 #linksandstuff #linkfinal {color: #ffffff;font-size: 3vh;padding-left: 4vh;}

@@ -16,6 +16,55 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Code+Pro:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+<script>
+  function showabout() {
+  var about = document.getElementById("about");
+  var links = document.getElementById("linksandstuff");
+  var main = document.getElementById("main");
+  var awards = document.getElementById("awards");
+  var projects = document.getElementById("projects");
+    about.style.display = "block";
+    links.style.display = "none";
+    main.style.display = "none";
+    awards.style.display = "none";
+    projects.style.display = "none";}
+
+    function showawards() {
+  var about = document.getElementById("about");
+  var links = document.getElementById("linksandstuff");
+  var main = document.getElementById("main");
+  var awards = document.getElementById("awards");
+  var projects = document.getElementById("projects");
+    about.style.display = "none";
+    links.style.display = "none";
+    main.style.display = "none";
+    awards.style.display = "block";
+    projects.style.display = "none";}
+
+    function showprojects() {
+  var about = document.getElementById("about");
+  var links = document.getElementById("linksandstuff");
+  var main = document.getElementById("main");
+  var awards = document.getElementById("awards");
+  var projects = document.getElementById("projects");
+    about.style.display = "none";
+    links.style.display = "none";
+    main.style.display = "none";
+    awards.style.display = "none";
+    projects.style.display = "block";}
+  
+  function hideall() {
+  var about = document.getElementById("about");
+  var links = document.getElementById("linksandstuff");
+  var main = document.getElementById("main");
+    about.style.display = "none";
+    links.style.display = "block";
+    main.style.display = "block";
+    awards.style.display = "none";
+    projects.style.display = "none";}
+</script>
+
     </head>
     <body>
           
@@ -37,16 +86,81 @@
           </div>
           <div class="column">
             <div id="linksandstuff">
-                <div id="link"><a href="https://github.com/rahuuuul">About</a></div>
-                <div id="link"><a href="/resume">Resume</a></div>
-                <div id="link"><a href="https://github.com/rahuuuul">Awards</a></div>
-                <div id="link"><a href="https://github.com/rahuuuul">Projects</a></div>
+                <div id="link"><a href="#" onclick="showabout();">About</div>
+                <div id="link"><a href="/resume" target="_blank">Resume</a></div>
+                <div id="link"><a href="#" onclick="showawards();">Awards</a></div>
+                <div id="link"><a href="#" onclick="showprojects();">Projects</a></div>
                 <div id="linkfinal"><a href="https://emloop.xyz" target="_blank">EmLoop Software Limited</a></div>
 
             </div>
 
           </div>
+
+
         </div>
+<!--End Main Stuff-->
+
+
+<!--Start About Section-->
+          <div id="about">
+            <div class="nav">
+              <div style="margin-left: 10%;vertical-align: middle;margin-right: 10%;">
+              <a href="#" onclick="hideall();" style="border-bottom: none;color: #000000;"><b>Rahul Kumar</b></a>
+              <div style="float: right;">
+              <a href="#" onclick="showabout();" class="active">About</a>
+              <a href="/resume" target="_blank">Resume</a>
+              <a href="#" onclick="showawards();">Awards</a>
+              <a href="#" onclick="showprojects();">Projects</a>
+              <a href="https://emloop.xyz" target="_blank">EmLoop Software Limited</a></div>
+            </div></div>
+            <div style="margin-left: 10%;margin-right: 10%;">
+              <p>abt</p>
+            </div>
+            
+
+            </div>
+<!--End About Section-->
+
+<!--Start Awards Section-->
+<div id="awards">
+  <div class="nav">
+    <div style="margin-left: 10%;vertical-align: middle;margin-right: 10%;">
+    <a href="#" onclick="hideall();" style="border-bottom: none;color: #000000;"><b>Rahul Kumar</b></a>
+    <div style="float: right;">
+      <a href="#" onclick="showabout();" >About</a>
+      <a href="/resume" target="_blank">Resume</a>
+    <a href="#" class="active">Awards</a>
+    <a href="#" onclick="showprojects();">Projects</a>
+    <a href="https://emloop.xyz" target="_blank">EmLoop Software Limited</a></div>
+  </div></div>
+  <div style="margin-left: 10%;">
+    <p>awards</p>
+  </div>
+  
+
+  </div>
+<!--End Awards Section-->
+
+<!--Start Awards Section-->
+<div id="projects">
+  <div class="nav">
+    <div style="margin-left: 10%;vertical-align: middle;margin-right: 10%;">
+    <a href="#" onclick="hideall();" style="border-bottom: none;color: #000000;"><b>Rahul Kumar</b></a>
+    <div style="float: right;">
+      <a href="#" onclick="showabout();" >About</a>
+      <a href="/resume" target="_blank">Resume</a>
+      <a href="#" onclick="showawards();">Awards</a>
+      <a href="#" class="active">Projects</a>
+      <a href="https://emloop.xyz" target="_blank">EmLoop Software Limited</a></div>
+  </div></div>
+  <div style="margin-left: 10%;">
+    <p>projects</p>
+  </div>
+  
+
+  </div>
+<!--End Awards Section-->
+
         
         </body>
 
