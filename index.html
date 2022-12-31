@@ -63,6 +63,22 @@
     main.style.display = "block";
     awards.style.display = "none";
     projects.style.display = "none";}
+
+    function showstuff1() {
+  var x = document.getElementById("nav1");
+  if (x.className === "nav") {x.className += " responsive";}
+     else {x.className = "nav";}
+}
+function showstuff2() {
+  var x = document.getElementById("nav2");
+  if (x.className === "nav") {x.className += " responsive";}
+     else {x.className = "nav";}
+}
+function showstuff3() {
+  var x = document.getElementById("nav3");
+  if (x.className === "nav") {x.className += " responsive";}
+     else {x.className = "nav";}
+}
 </script>
 
     </head>
@@ -103,18 +119,22 @@
 
 <!--Start About Section-->
           <div id="about">
-            <div class="nav">
-              <div style="margin-left: 10%;vertical-align: middle;margin-right: 10%;">
-              <a href="#" onclick="hideall();" style="border-bottom: none;color: #000000;"><b>Rahul Kumar</b></a>
+            <div class="nav" id="nav1">
+              <div style="margin-left: 10%;margin-right: 10%;">
+              <a href="#" onclick="hideall();" style="border-bottom: none;color: #000000;" class="logo"><b>Rahul Kumar</b></a>
               <div style="float: right;">
               <a href="#" onclick="showabout();" class="active">About</a>
               <a href="/resume" target="_blank">Resume</a>
               <a href="#" onclick="showawards();">Awards</a>
               <a href="#" onclick="showprojects();">Projects</a>
-              <a href="https://emloop.xyz" target="_blank">EmLoop Software Limited</a></div>
+              <a href="https://emloop.xyz" target="_blank">EmLoop Software Limited</a>
+              <a href="javascript:void(0);" class="icon" onclick="showstuff1()">
+                <i class="fa fa-bars"></i>
+              </a></div>
+
             </div></div>
             <div style="margin-left: 10%;margin-right: 10%;">
-              <p>abt</p>
+              <h1>about</h1>
             </div>
             
 
@@ -123,18 +143,22 @@
 
 <!--Start Awards Section-->
 <div id="awards">
-  <div class="nav">
-    <div style="margin-left: 10%;vertical-align: middle;margin-right: 10%;">
-    <a href="#" onclick="hideall();" style="border-bottom: none;color: #000000;"><b>Rahul Kumar</b></a>
+  <div class="nav" id="nav2">
+    <div style="margin-left: 10%;margin-right: 10%;">
+    <a href="#" onclick="hideall();" style="border-bottom: none;color: #000000;" class="logo"><b>Rahul Kumar</b></a>
     <div style="float: right;">
-      <a href="#" onclick="showabout();" >About</a>
-      <a href="/resume" target="_blank">Resume</a>
-    <a href="#" class="active">Awards</a>
+    <a href="#" onclick="showabout();">About</a>
+    <a href="/resume" target="_blank">Resume</a>
+    <a href="#" onclick="showawards();" class="active">Awards</a>
     <a href="#" onclick="showprojects();">Projects</a>
-    <a href="https://emloop.xyz" target="_blank">EmLoop Software Limited</a></div>
+    <a href="https://emloop.xyz" target="_blank">EmLoop Software Limited</a>
+    <a href="javascript:void(0);" class="icon" onclick="showstuff2()">
+      <i class="fa fa-bars"></i>
+    </a></div>
+
   </div></div>
   <div style="margin-left: 10%;">
-    <p>awards</p>
+    <h1>awards</h1>
   </div>
   
 
@@ -143,18 +167,21 @@
 
 <!--Start Awards Section-->
 <div id="projects">
-  <div class="nav">
-    <div style="margin-left: 10%;vertical-align: middle;margin-right: 10%;">
-    <a href="#" onclick="hideall();" style="border-bottom: none;color: #000000;"><b>Rahul Kumar</b></a>
+  <div class="nav" id="nav3">
+    <div style="margin-left: 10%;margin-right: 10%;">
+    <a href="#" onclick="hideall();" style="border-bottom: none;color: #000000;" class="logo"><b>Rahul Kumar</b></a>
     <div style="float: right;">
       <a href="#" onclick="showabout();" >About</a>
       <a href="/resume" target="_blank">Resume</a>
       <a href="#" onclick="showawards();">Awards</a>
       <a href="#" class="active">Projects</a>
       <a href="https://emloop.xyz" target="_blank">EmLoop Software Limited</a></div>
+      <a href="javascript:void(0);" class="icon" onclick="showstuff3()">
+        <i class="fa fa-bars"></i>
+      </a>
   </div></div>
   <div style="margin-left: 10%;">
-    <p>projects</p>
+    <h1>projects</h1>
   </div>
   
 
