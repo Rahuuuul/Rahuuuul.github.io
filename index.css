@@ -44,7 +44,8 @@ table a{font-size: 3vh;color: #ffff;text-decoration: underline;}
 table a.link{font-size: 2vh;}
 table a:hover{color:rgba(221, 221, 221, 0.377);}
 table td{padding-left: 4vh; padding-right: 4vh; font-size: 2vh;padding-bottom: 1vh; vertical-align:baseline;}
-
+table th{padding-left: 4vh; padding-right: 4vh;text-align: left;}
+#about h2, #awards h2, #projects h2{font-size: 2vh;padding-top: 1vh; display: none;}
 #linksandstuff {margin-left: 10%;margin-top: 7vh;height: 80vh;border-left: 0.5vh solid #ffffff;position: absolute;left: 50%;}
 #linksandstuff #link {color: #ffffff;font-size: 3vh;padding-left: 4vh;padding-bottom: 15vh;}
 #linksandstuff a {color: #ffffff;}
@@ -68,5 +69,7 @@ footer{padding: 0.02vh 0.02vh;background: rgb(221, 221, 221);text-align: center;
     .nav.responsive a.icon {position: absolute;right: 0;top: 0;}
     .nav.responsive a {float: none;display: block;text-align: left;}   
     table{width: 100%;}
-    table td{padding-left: 2vh; padding-right: 2vh; font-size: 2vh; padding-bottom: 1vh;}
+    table td{display: none;}
+    table th{display: block; padding-bottom: 3vh;}
+    #about h2, #awards h2, #projects h2{display: block;}
 }
