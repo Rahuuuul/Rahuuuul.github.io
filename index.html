@@ -3,7 +3,10 @@
     <head>
         <title>Rahul Kumar</title>
         <link rel="icon" href="/media/favicon.ico">
+
+<!--GOOGLE STUFF-->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-587S1NH7Z0"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -14,9 +17,10 @@
 <link rel='stylesheet' type='text/css' href='index.css'>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Code+Pro:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
+<!--Page Making Stuff-->
 <script>
   function showabout() {
   var about = document.getElementById("about");
@@ -81,6 +85,43 @@ function showstuff3() {
 }
 </script>
 
+<!--SPOTIFY-->
+<script>
+  var songData;
+
+  function updatePlayer() {
+    fetch(`https://spotify.rahuuuul.workers.dev`)
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.hasOwnProperty("ERROR")) {
+          document.getElementById("track").innerHTML = `I'm not playing anything at the moment.`;
+          document.getElementById("artist").innerHTML = "  ";
+          document.getElementById("album-name").innerHTML = "  ";
+
+          document.getElementById("trackArtwork").setAttribute("src", "https://developer.spotify.com/assets/branding-guidelines/icon1@2x.png");
+          return;
+        }
+        songData = data;
+        document.getElementById("track").innerHTML = data.item.name;
+        document.getElementById("artist").innerHTML = "by " + data.item.artists[0].name;
+        document.getElementById("album-name").innerHTML = "on " + data.item.album.name;
+
+        document
+          .getElementById("trackArtwork")
+          .setAttribute("src", data.item.album.images[0].url);
+      });
+  }
+
+
+
+  // Load player for the first time
+  setTimeout(updatePlayer(), 2000);
+
+
+</script>
+
+
+
     </head>
     <body>
           
@@ -98,13 +139,26 @@ function showstuff3() {
                     <a href="https://instagram.com/rahuuuulk" target="_blank" class="fa-brands fa-instagram fa-2xl"></a>  
                     
                      </div>
+                
+                <div style="color: #ffffff; padding-right:10vh;">
+                  <br><h3 id="spotify-title">Currently Listening To:</h3> <br>
+
+
+                <img id="trackArtwork"/>
+                <div id="track"></div> <br>
+                <div id="artist"></div> <br>
+                <div id="album-name"></div>
+                  </div>
+                  <!--Spotify Thing-->
+
+  
 
 
             </div>
           </div>
           <div class="column">
             <div id="linksandstuff">
-                <div id="link"><a href="#" onclick="showabout();">About</div>
+                <div id="link"><a href="#" onclick="showabout();">About</a></div>
                 <div id="link"><a href="/resume" target="_blank">Resume</a></div>
                 <div id="link"><a href="#" onclick="showawards();">Awards</a></div>
                 <div id="link"><a href="#" onclick="showprojects();">Projects</a></div>
