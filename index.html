@@ -93,15 +93,19 @@ function showstuff3() {
     fetch(`https://spotify.rahuuuul.workers.dev`)
       .then((response) => response.json())
       .then((data) => {
-        if (data.hasOwnProperty("ERROR")) {
-          document.getElementById("track").innerHTML = `I'm not playing anything at the moment.`;
-          document.getElementById("artist").innerHTML = "  ";
-          document.getElementById("album-name").innerHTML = "  ";
+        if (data.hasOwnProperty("items")) {
+          document.getElementById("spotify-title").innerHTML = "Last Listened To:";
+          document.getElementById("track").innerHTML = data.items[0].track.name;
+        document.getElementById("artist").innerHTML = "by " + data.items[0].track.artists[0].name;
+        document.getElementById("album-name").innerHTML = "on " + data.items[0].track.album.name;
 
-          document.getElementById("trackArtwork").setAttribute("src", "https://developer.spotify.com/assets/branding-guidelines/icon1@2x.png");
+        document
+          .getElementById("trackArtwork")
+          .setAttribute("src", data.items[0].track.album.images[0].url);
           return;
         }
         songData = data;
+        document.getElementById("spotify-title").innerHTML = "Currently Listening To:";
         document.getElementById("track").innerHTML = data.item.name;
         document.getElementById("artist").innerHTML = "by " + data.item.artists[0].name;
         document.getElementById("album-name").innerHTML = "on " + data.item.album.name;
@@ -110,12 +114,14 @@ function showstuff3() {
           .getElementById("trackArtwork")
           .setAttribute("src", data.item.album.images[0].url);
       });
+
   }
 
 
 
-  // Load player for the first time
-  setTimeout(updatePlayer(), 2000);
+
+  updatePlayer();
+
 
 
 </script>
@@ -141,7 +147,7 @@ function showstuff3() {
                      </div>
                 
                 <div style="color: #ffffff; padding-right:10vh;">
-                  <br><h3 id="spotify-title">Currently Listening To:</h3> <br>
+                  <br><h3 id="spotify-title"></h3> <br>
 
 
                 <img id="trackArtwork"/>
