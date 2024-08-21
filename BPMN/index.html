@@ -38,6 +38,7 @@
       .bjs-powered-by {
         visibility: hidden;
       }
+      .bpmn-icon-group, .bpmn-icon-participant, .bpmn-icon-data-store, .bpmn-icon-data-object, .bpmn-icon-subprocess-expanded {visibility: hidden;}
 
       .needs-discussion:not(.djs-connection) .djs-visual > :nth-child(1) {
         stroke: rgba(66, 180, 21, 0.7) !important; /* color elements as red */
@@ -53,7 +54,7 @@
   <body>
     <div id="canvas"></div>
 
-    <button id="save-button">print to console</button>
+    <button id="save-button">Download Your Business Model</button>
 
     <script>
 
@@ -75,6 +76,15 @@
         try {
 
           var result = await bpmnModeler.saveXML({ format: true });
+          var element = document.createElement('a');
+          element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(result.xml));
+          element.setAttribute('download', "output.xml");
+
+          element.style.display = 'none';
+          document.body.appendChild(element);
+
+          element.click();
+          document.body.removeChild(element);
 
           alert('Diagram exported. Check the developer tools!');
 
