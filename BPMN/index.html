@@ -76,19 +76,8 @@
         try {
 
           var result = await bpmnModeler.saveXML({ format: true });
-          var element = document.createElement('a');
-          element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(result.xml));
-          element.setAttribute('download', "output.xml");
 
-          element.style.display = 'none';
-          document.body.appendChild(element);
-
-          element.click();
-          document.body.removeChild(element);
-
-          alert('Diagram exported. Check the developer tools!');
-
-          console.log('DIAGRAM', result.xml);
+          console.log('DIAGRAM:', result.xml);
         } catch (err) {
 
           console.error('could not save BPMN 2.0 diagram', err);
