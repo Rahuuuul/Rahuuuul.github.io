@@ -77,7 +77,7 @@
 
           var result = await bpmnModeler.saveXML({ format: true });
 
-          console.log('DIAGRAM:', result.xml);
+          console.log(result.xml);
         } catch (err) {
 
           console.error('could not save BPMN 2.0 diagram', err);
