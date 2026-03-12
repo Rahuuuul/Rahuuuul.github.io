@@ -1,93 +1,341 @@
-body,html{padding:0;margin:0}
-html{font-family: 'Source Code Pro', monospace;background:#0a4a64;max-height:100vh}
+/* Global Styles */
+body,
+html {
+    padding: 0;
+    margin: 0;
+}
 
-* {box-sizing: border-box;}
-  body {min-height: 100vh;display: flex;flex-direction: column;}
+html {
+    font-family: 'Source Code Pro', monospace;
+    background: #0a4a64;
+    max-height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Layout */
 .column {
     float: left;
-    width: 50%;}
-.rowsofstuff:after {display: table;clear: both;}
-#main{margin-left: 15%;}
-#main h1, #main h2, #main h3 {margin: auto;color: #ffff;margin-top: 30vh;font-size: 8vh;}
-#main h2{font-size: 4vh;margin-top: 3vh;}
-#main h3{font-size: 2vh;margin-top: 5vh;}
+    width: 50%;
+}
 
-.socials{
+.rowsofstuff:after {
+    display: table;
+    clear: both;
+}
+
+/* Main Section */
+#main {
+    margin-left: 15%;
+}
+
+#main h1,
+#main h2,
+#main h3 {
+    margin: auto;
+    color: #ffff;
+    margin-top: 30vh;
+    font-size: 8vh;
+}
+
+#main h2 {
+    font-size: 4vh;
+    margin-top: 3vh;
+}
+
+#main h3 {
+    font-size: 2vh;
+    margin-top: 5vh;
+}
+/* Social Links */
+.socials {
     margin: auto;
     display: flex;
     padding-top: 5vh;
 }
-.socials a{
+
+.socials a {
     font-size: 5vh;
     color: #ffff;
     text-decoration: none;
     padding-right: 4vh;
 }
-.socials a:hover {color:rgba(221, 221, 221, 0.377);}
-#spotify-div{color: #ffffff; padding-right:10vh;}
 
-#trackArtwork {max-width: 14vh; border-radius: 10px; float:left;}
-#track {max-width:60ch; text-align: left; padding-left: 15vh;font-weight: bolder;}
-#artist {max-width:60ch; text-align: left; padding-left: 15vh;}
-#album-name {max-width:60ch; text-align: left; padding-left: 15vh;}
+.socials a:hover {
+    color: rgba(221, 221, 221, 0.377);
+}
 
-.nav {overflow: hidden;background: rgb(221, 221, 221);}
+/* Spotify Player */
+#spotify-div {
+    color: #ffffff;
+    padding-right: 10vh;
+}
 
-  .nav a {
+#trackArtwork {
+    max-width: 14vh;
+    border-radius: 10px;
     float: left;
-    display:block;
+}
+
+#track,
+#artist,
+#album-name {
+    max-width: 60ch;
+    text-align: left;
+    padding-left: 15vh;
+    font-size: 2vh;
+}
+
+#track {
+    font-weight: bolder;
+}
+/* Navigation */
+.nav {
+    overflow: hidden;
+    background: rgb(221, 221, 221);
+}
+
+.nav a {
+    float: left;
+    display: block;
     color: rgb(72, 72, 72);
     text-align: middle;
-    padding: 1vh 2vh;
+    padding: 1vh 1.2vh;
     text-decoration: none;
-    font-size: 2vh;}
-  
-  .nav a:hover, .nav a.active {color: rgb(0, 0, 0);border-bottom: solid;}
-  
-.nav .icon {display: none;}
-#about, #awards, #projects{display: none;height: 80vh;position:relative; color: #ffffff;}
-#about h1, #awards h1, #projects h1{font-size: 5vh;padding-top: 4vh;}
-table{border: none; width: 80%; table-layout: fixed;}
-table a{font-size: 3vh;color: #ffff;text-decoration: underline;}
-table a.link{font-size: 2vh;}
-table a:hover{color:rgba(221, 221, 221, 0.377);}
-table td{padding-left: 4vh; padding-right: 4vh; font-size: 2vh;padding-bottom: 1vh; vertical-align:baseline;}
-table th{padding-left: 4vh; padding-right: 4vh;text-align: left;}
-#about h2, #awards h2, #projects h2{font-size: 2vh;padding-top: 1vh; display: none;}
-#linksandstuff {margin-left: 10%;margin-top: 7vh;height: 80vh;border-left: 0.5vh solid #ffffff;position: absolute;left: 50%;}
-#linksandstuff #link {color: #ffffff;font-size: 3vh;padding-left: 4vh;padding-bottom: 15vh;}
-#linksandstuff a {color: #ffffff;}
-#linksandstuff a:hover {color:rgba(221, 221, 221, 0.377);}
-#linksandstuff #linkfinal {color: #ffffff;font-size: 3vh;padding-left: 4vh;}
-footer{padding: 0.02vh 0.02vh;background: rgb(221, 221, 221);text-align: center;position: bottom;bottom: 0;margin-top: auto;font-size: 2vh;}
+    font-size: 1.7vh;
+    white-space: nowrap;
+}
 
+.nav a:hover,
+.nav a.active {
+    color: rgb(0, 0, 0);
+    border-bottom: solid;
+}
+
+.nav .icon {
+    display: none;
+}
+/* Sections */
+#about,
+#awards,
+#projects {
+    display: none;
+    height: 80vh;
+    position: relative;
+    color: #ffffff;
+}
+
+#about h1,
+#awards h1,
+#projects h1 {
+    font-size: 5vh;
+    padding-top: 4vh;
+}
+
+#about h2,
+#awards h2,
+#projects h2 {
+    font-size: 2vh;
+    padding-top: 1vh;
+    display: none;
+}
+
+/* Tables */
+table {
+    border: none;
+    width: 80%;
+    table-layout: fixed;
+}
+
+table a {
+    font-size: 3vh;
+    color: #ffff;
+    text-decoration: underline;
+}
+
+table a.link {
+    font-size: 2vh;
+}
+
+table a:hover {
+    color: rgba(221, 221, 221, 0.377);
+}
+
+table td {
+    padding-left: 4vh;
+    padding-right: 4vh;
+    font-size: 2vh;
+    padding-bottom: 1vh;
+    vertical-align: baseline;
+}
+
+table th {
+    padding-left: 4vh;
+    padding-right: 4vh;
+    text-align: left;
+}
+/* Links Section */
+#linksandstuff {
+    margin-left: 10%;
+    margin-top: 7vh;
+    height: 80vh;
+    border-left: 0.5vh solid #ffffff;
+    position: absolute;
+    left: 50%;
+}
+
+#linksandstuff #link {
+    color: #ffffff;
+    font-size: 3vh;
+    padding-left: 4vh;
+    padding-bottom: 11vh;
+}
+
+#linksandstuff a {
+    color: #ffffff;
+}
+
+#linksandstuff a:hover {
+    color: rgba(221, 221, 221, 0.377);
+}
+
+#linksandstuff #linkfinal {
+    color: #ffffff;
+    font-size: 3vh;
+    padding-left: 4vh;
+}
+
+/* Footer */
+footer {
+    padding: 0.02vh 0.02vh;
+    background: rgb(221, 221, 221);
+    text-align: center;
+    position: bottom;
+    bottom: 0;
+    margin-top: auto;
+    font-size: 2vh;
+}
+
+/* Media Queries - Tablets */
 @media screen and (max-width: 992px) {
-    footer{display: none;}
-    .column{width: 100%;}
-    #main{text-align: center;align-items: center;margin-left: 0;}
-    #main h1{margin-top: 20vh;}
-    .socials {align-items: center;text-align: center;display:block;}
-    .socials a{padding:3.4vh; padding-right: 0;}
-    #linksandstuff{margin-left: 0;left: 0;right: 0; text-align: center;align-items: center;border-left: 0;}
-    #linksandstuff #link, #linksandstuff #linkfinal {padding-left: 0;}
-    .nav a:not(.logo) {padding-right: 10vh; display: none;}
-    .nav a.icon{float: right; display: block;}
-    .nav a.icon:active, .nav a.icon:hover{border-bottom: none;}
-    .nav.responsive {position: relative;}
-    .nav.responsive a.icon {position: absolute;right: 0;top: 0;}
-    .nav.responsive a {float: none;display: block;text-align: left;}   
-    table{width: 100%;}
-    table td{display: none;}
-    table th{display: block; padding-bottom: 3vh;}
-    #about h2, #awards h2, #projects h2{display: block;}
+    footer {
+        display: none;
+    }
 
-    #spotify-title{display: none;}
-    #trackArtwork{display: none;}
-    #track{display: none;}
-    #artist{display: none;}
-    #album-name{display: none;}
+    .column {
+        width: 100%;
+    }
 
+    #main {
+        text-align: center;
+        align-items: center;
+        margin-left: 0;
+    }
 
+    #main h1 {
+        margin-top: 20vh;
+    }
 
+    .socials {
+        align-items: center;
+        text-align: center;
+        display: block;
+    }
 
-  }
+    .socials a {
+        padding: 3.4vh;
+        padding-right: 0;
+    }
+
+    #linksandstuff {
+        margin-left: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        align-items: center;
+        border-left: 0;
+    }
+
+    #linksandstuff #link,
+    #linksandstuff #linkfinal {
+        padding-left: 0;
+    }
+
+    .nav a:not(.logo) {
+        padding-right: 10vh;
+        display: none;
+    }
+
+    .nav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .nav a.icon:active,
+    .nav a.icon:hover {
+        border-bottom: none;
+    }
+
+    .nav.responsive {
+        position: relative;
+    }
+
+    .nav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .nav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    table td {
+        display: none;
+    }
+
+    table th {
+        display: block;
+        padding-bottom: 3vh;
+    }
+
+    #about h2,
+    #awards h2,
+    #projects h2 {
+        display: block;
+    }
+
+    #spotify-title {
+        display: none;
+    }
+
+    #trackArtwork {
+        display: none;
+    }
+
+    #track {
+        display: none;
+    }
+
+    #artist {
+        display: none;
+    }
+
+    #album-name {
+        display: none;
+    }
+}
